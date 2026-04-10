@@ -1,0 +1,22 @@
+# Spring Boot
+WattSmart_AI/target/
+
+# Python
+Watt_AI/.venv/
+Watt_AI/__pycache__/
+Watt_AI/*.pkl
+
+# React
+wattsmart-frontend/node_modules/
+wattsmart-frontend/.env
+wattsmart-frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+.env

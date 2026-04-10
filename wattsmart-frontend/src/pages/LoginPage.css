@@ -1,0 +1,229 @@
+/* ============================================================
+   LoginPage.css
+   All styles for the login and register screen.
+   ============================================================ */
+
+/* ── Splash screen ─────────────────────────────────────────── */
+
+.splash {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.splash--hidden {
+  opacity: 0;
+}
+
+.splash__logo {
+  width: 80vw;
+  max-width: 800px;
+  border-radius: 32px;
+  box-shadow: 0 0 80px rgba(59, 130, 246, 0.4);
+}
+
+/* ── Page layout ───────────────────────────────────────────── */
+
+.login-page {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-card {
+  background: #1e293b;
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+
+.login-logo {
+  width: 80px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.login-title {
+  color: #f1f5f9;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.login-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────── */
+
+.login-tabs {
+  display: flex;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-tab--active {
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Form ──────────────────────────────────────────────────── */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  background: #0f172a;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  overflow: hidden;
+}
+
+.input-field {
+  flex: 1;
+  padding: 12px 8px;
+  background: transparent;
+  color: #f1f5f9;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.eye-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+/* ── Electricity rate ──────────────────────────────────────── */
+
+.rate-box {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #334155;
+}
+
+.rate-label {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.rate-value {
+  color: #60a5fa;
+}
+
+.rate-slider {
+  width: 100%;
+  accent-color: #3b82f6;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.rate-hints {
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+  font-size: 11px;
+}
+
+.rate-hints__default {
+  color: #60a5fa;
+}
+
+/* ── Error ─────────────────────────────────────────────────── */
+
+.error-box {
+  background: #7f1d1d;
+  color: #fca5a5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+
+.submit-btn {
+  padding: 13px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn--loading {
+  opacity: 0.7;
+}
+
+.divider {
+  position: relative;
+  margin: 16px 0;
+  border-top: 1px solid #334155;
+}
+
+.divider__text {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  padding: 0 8px;
+  color: #475569;
+  font-size: 12px;
+}
+
+.guest-btn {
+  width: 100%;
+  padding: 11px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

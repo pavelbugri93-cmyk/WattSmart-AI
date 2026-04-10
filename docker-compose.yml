@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  flask:
+    build: ./Watt_AI
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+
+  spring-boot:
+    build: ./WattSmart_AI
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION: 86400000
+      FLASK_SERVICE_URL: ${FLASK_SERVICE_URL}
+    depends_on:
+      - postgres
+      - flask
+
+  frontend:
+    build: ./wattsmart-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - spring-boot
+
+volumes:
+  postgres_data:
